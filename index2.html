@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photomatt</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Play" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nixie+One|Pathway+Gothic+One" rel="stylesheet">
+
+
+	<meta charset="utf-8">
+	
+
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<link rel="stylesheet" href="photomatt.github.io/colorbox.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script src="photomatt.github.io/jquery.colorbox-min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+			
+				$(".group3").colorbox({rel:'group3', transition:"elastic", width:"95%", height:"85%", slideshow:false});
+				
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+
+				$('.non-retina').colorbox({rel:'group5', transition:'none'})
+				$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+
+
+			});
+		</script>
+		
+
+	</head>
+	<style>
+
+	
+	body {
+		/*background-color: #5A5050;
+    	background-image: linear-gradient(to top, black 0%, white 100%), url("file:///C:/Users/User/Desktop/WWW/galleries/background/Untitled%20Export/IMG_0249-2-3.jpg");
+    	background-blend-mode: screen;
+    	background-size: auto;
+    	background-clip:content-box;
+	*/
+}
+		
+
+
+		.container {
+		
+		}
+
+
+
+		.sidebar {
+
+			position: fixed;
+			float: left;
+			clear: right;
+			padding: 10px;
+			height: 1080px;
+			/* border: solid black 1px;
+			border-radius: 5px; */
+		}
+
+		ul {
+			list-style-type: none;
+		}
+
+
+
+		.name {
+			/* font-family: 'Lobster', cursive; */
+			font-family: 'Pathway Gothic One', sans-serif;
+			font-size: 38px;
+			color: red;
+		}
+
+		.collection {
+			/* font-family: 'Lobster', cursive; */
+			font-family: 'Pathway Gothic One', sans-serif;
+
+			font-size: 20px;
+			text-decoration: none;
+		}
+
+		.gallerylist {
+			/* font-family: 'Monofett', cursive; */
+			font-family: 'Pathway Gothic One', sans-serif;
+
+			font-size: 22px; 
+		}
+
+		.about {
+			font-family: 'Pathway Gothic One', sans-serif;
+
+
+			font-size: 22px; 	
+			/*position: fixed;
+			bottom: 45px; */
+			border-radius: 5px;
+		}
+
+		.main {
+			float: right;
+			position: relative;
+			clear: left;
+			display : flex;
+			flex-wrap: wrap;
+			width: 80%;
+			height: 100%;
+			/* border: solid 1px;
+			border-radius: 5px; */
+
+			/* height of main is fixed
+			height: 750px;   */
+			margin-right: 25px;
+}
+
+.group3 {
+ 	padding: 5px;
+ 	margin: 5px;
+}
+
+
+img {
+
+	padding: 5px;
+	/*border: 1px solid #547A82; */
+}
+	/*
+	border: solid white;
+	border-radius: 5px;
+	-webkit-border-radius: 15px;
+*/
+/*
+	float: left;
+	padding: 10px 10px 25px 10px;
+	margin: 5px;
+	background: #eee;
+	border: 1px solid #fff;
+	-moz-box-shadow: 0px 2px 15px #333;
+	box-shadow: 0px 0px 0px 7px #000;
+	*/
+	/*z-index: 1;
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);*/
+	
+
+.thumb {
+
+	transition: width 2s ease 1s;
+	width: 240px;
+	height: 180px;
+}
+
+
+
+/* unvisited link */
+a.collection:link {
+	text-decoration: none;
+	color: black;
+}
+
+/* visited link */
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+/* mouse over link */
+a.collection:hover {
+	text-decoration: none;
+	color: white;
+	background-color: black;
+	border-radius: 0px 0px 0px 0px;
+	box-shadow: 10px 10px 5px black;
+
+}
+
+img.thumb:hover {
+		opacity: 0.9;
+		padding: 5px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		/*filter: brightness(105%) contrast(105%) drop-shadow(5px 5px 5px white);*/
+		/* border: 1px solid black; */
+		/* border-width:2px; */ 
+}
+
+/* selected link */
+a:active {
+	text-decoration: underline;
+	color: red;
+}
+
+
+
+
+/* -----------Smartphone View----------- */ 
+@media only screen and (max-width : 480px)   {
+
+   /* All your smartphone rules go inside here */
+ 	.sidebar {
+ 	position: relative;
+ 	display: inline-block;
+ 	z-index: 1;
+ 	max-height: 480px;
+
+     
+   }
+
+   .main {
+    width: 300px;
+    margin: auto;
+   }
+   
+   .about {
+  	
+
+   }
+}
+
+
+@media only screen and (orientation: landscape) {
+    body 
+        
+   .sidebar {
+
+   }
+   
+
+   .main {
+ 
+    margin: auto;
+   }
+   
+   .header {
+     
+   }
+
+
+
+
+
+    }
+}
+
+
+
+/* -----------Tablet View----------- */ 
+@media only screen and (max-width : 650px) and (min-width : 481px)   {
+
+   /* All your tablet rules go inside here */
+}
+
+
+.btnz {
+    display: block;
+    float: left;
+
+    border:none;
+
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFF;
+}
+.btnz:hover {
+    color: #3b5998;
+    box-shadow: 10px 10px 5px black;
+
+}
+
+/* .facebook {
+    background-color: #3b5998;
+    border-radius: 10px;
+}
+*/
+
+
+
+</style>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="sidebar">
+
+			<div class="header">
+				<h1 class="name">Photomatt</h1>
+			</div>
+
+			<div class="gallerylist">galleries:</div>
+
+			<div>
+				<ul>
+					<li><a href="index.html" class="collection">main</li></a>
+					<li><a href="Georgia.html" class="collection">GEORGIA</li>
+					<li><a href="Philippines.html" class="collection">PHILIPPINES</li>
+					<li><a href="Vietnam.html" class="collection">VIETNAM</li>
+					<li><a href="Helsinki.html" class="collection">HELSINKI</li>
+					<li><a href="Portraits.html" class="collection">PORTRAITS</a></li>
+
+				</ul>
+			</div>
+
+			<div class="about">about me:
+
+
+
+				<div>
+					<p><a href="https://www.instagram.com/photo.m4tt/" class="fa fa-instagram"></a></p>
+					<p><a href="https://www.facebook.com/photo.m4tt" class="fa fa-facebook"></a></p>
+					<p><a class="btnz share facebook" href="#"><i class="fa fa-facebook"></i> Share</a></p>
+					</div>
+
+				</div>	
+
+			</div>
+			</div>
+		</div>
+		<div class="main">
+
+
+				
+				<div><a class="group3" href="IMG_0900.jpg" title="Helsinki"><img class="thumb" src="IMG_0900thumbnail.jpg"></a></div>
+				<div><a class="group3" href="galleries/Helsinki/MG_0901.jpg" title="Helsinki"><img class="thumb" src="../MG_0901thumb.jpg"></a></div>
+				<div><a class="group3" href="/photomatt.github.io/galleries/Helsinki/_MG_0929-2.JPG/" title="Helsinki"><img class="thumb" src="photomatt.github.io/galleries/Helsinki/_MG_0929thumb.JPG"></a></div>
+
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0918-4.jpg" title="Helsinki"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0918-4thumb.jpg"></a></div>
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0907.jpg" title="Helsinki"><img class="thumb" src=file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0907thumb.jpg></a></div>
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0904.jpg"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0904thumb.jpg"></a></div>
+				
+				
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_5500.jpg"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_5500-2thumb.jpg"></a></div>
+
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_4234-3.jpg" title="Helsinki"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_4234-5.jpg"></a></div>
+
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_4236.jpg" title="Helsinki"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_4236-2.jpg"></a></div>
+
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900.jpg" title="Helsinki"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900thumbnail.jpg"></a></div>
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900.jpg" title="Helsinki"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900thumbnail.jpg"></a></div>
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900.jpg" title="Helsinki"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900thumbnail.jpg"></a></div>
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900.jpg" title="Helsinki"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900thumbnail.jpg"></a></div>
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900.jpg" title="Helsinki"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900thumbnail.jpg"></a></div>
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900.jpg" title="Helsinki"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900thumbnail.jpg"></a></div>
+				<div><a class="group3" href="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900.jpg" title="Helsinki"><img class="thumb" src="file:///C:/Users/User/Desktop/WWW/galleries/Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		
+	</div>
+
+
+	<div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none; visibility: visible; top: 106px; left: 336px; position: absolute; width: 752px; height: 533px; opacity: 0;"><div id="cboxWrapper" style="height: 533px; width: 752px;"><div><div id="cboxTopLeft" style="float: left;"></div>
+</body>
+</html>
