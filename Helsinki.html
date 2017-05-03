@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moja Pierwsza strona</title>
+<link href="https://fonts.googleapis.com/css?family=Lobster|Play" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet">
+
+	<link rel="stylesheet" href="colorbox.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="file:///C:/Users/User/Desktop/WWW/colorbox-master/jquery.colorbox-min.js"></script>
+		<script>
+			$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"elastic", width:"80%", height:"80%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+				$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({inline:true, width:"50%"});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+
+				$('.non-retina').colorbox({rel:'group5', transition:'none'})
+				$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script>
+
+</head>
+<style>
+
+  .sidebar {
+/*	border: solid black 1px;
+	border-radius: 5px; */
+	position: fixed;
+	float: left;
+	clear: right;
+	padding: 10px;
+	height: 750px;
+	/* background: url("https://scontent.fqlf1-1.fna.fbcdn.net/v/t1.0-0/q83/p206x206/13902674_10153836380307362_8491433983669130179_n.jpg?oh=3010c979b621aa6e8c2491ee94255056&oe=59922746");
+ */
+
+}
+  .name {
+	font-family: 'Lobster', cursive;
+}
+  .collection {
+	font-family: 'Lobster', cursive;
+	font-size: 28px;
+}
+  .gallerylist {
+	font-family: 'Monofett', cursive;
+	font-size: 28px; 
+}
+  .about {
+	font-family: 'Monofett', cursive;
+	font-size: 28px; 	
+	position: fixed;
+	bottom: 45px;
+	border-radius: 5px;
+	
+}
+
+  .main {
+	float: right;
+	border: solid 1px;
+	border-radius: 5px;
+	position: relative;
+	clear: left;
+	display : flex;
+	flex-wrap: wrap;
+	width: 80%;
+	height: 100%;
+	margin-right: 25px;
+	
+	
+
+/*  	background-image: url("file:///C:/Users/User/Desktop/WWW/galleries/background/back_main.jpg");
+	background-size: 50%;
+	background-color:#ffffff;
+	opacity:.8;
+	background-repeat:no-repeat; */
+	
+}
+
+  .group3 {
+	padding: 5px;
+}
+
+  
+  img {
+	
+	padding: 5px;
+}
+
+
+</style>
+</head>
+
+<body>
+  <div class="sidebar">
+
+    <div class="header">
+      <h1 class="name">PhotoMatt</h1>
+    </div>
+
+    <div class="gallerylist">
+      <p>galleries</p>
+    </div>
+
+    <div>
+      <ul>
+		<li class="collection"><a href="index.html">Main</li>
+		<li class="collection"><a href="Georgia.html">Georgia</li>
+		<li class="collection"><a href="Philippines.html">Philippines</li>
+		<li class="collection"><a href="Vietnam.html">Vietnam</li>
+		<li class="collection"><a href="Helsinki.html">Helsinki</li>
+      </ul>
+    </div>
+
+    <div class="about"><p>about me:</p></div>
+  </div>
+
+<div class="main">
+
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901thumb.jpg"></a></div>	<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0901thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0929thumb.jpg"></a></div>
+		<div><a class="group3" href="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900.jpg" title="Helsinki"><img src="C:\Users\User\Desktop\WWW\galleries\Helsinki/_MG_0900thumbnail.jpg"></a></div>
+	
+
+
+
+  </div>
+
+
+
+</body>
+</html>
